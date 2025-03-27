@@ -56,7 +56,7 @@ class Group:
         }
 
 #Запросы Contact
-@app.route('/api/v1/contact', methods=['POST'])
+@app.route('/api/v1/contact/', methods=['POST'])
 def create_contact():
     contact = Contact(1, 'test', 'test', 'test', Phone(1, 7, 9, 9), 'test', date(2022, 1, 1))
     return jsonify(contact.constructor())
@@ -77,7 +77,7 @@ def delete_contact():
     return jsonify(contact.constructor())
 
 #Запросы Group
-@app.route('/api/v1/group', methods=['POST'])
+@app.route('/api/v1/group/', methods=['POST'])
 def create_group():
     group = Group(1, 'test', 'test', 1)
     return jsonify(group.constructor())
